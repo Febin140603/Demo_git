@@ -1,18 +1,18 @@
-language: cpp
-compiler: gcc
-dist: trusty
-before_install:
-- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test 
-- sudo apt-get update -qq
-install:
-- sudo apt-get install -qq g++-6
-- sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
-script:
-- g++ febin.cpp -std=c++17 -o travis_gcc_cpp17
-- ./travis_gcc_cpp17
-g++ akshay.cpp -std=c++17 -o travis_gcc_cpp17
-- ./travis_gcc_cpp17
-g++ himm.cpp -std=c++17 -o travis_gcc_cpp17
-- ./travis_gcc_cpp17
-g++ AjeetDehal.cpp -std=c++17 -o travis_gcc_cpp17
-- ./travis_gcc_cpp17
+-language: cpp
+ compiler: gcc
+ dist: trusty
+ before_install:
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test 
+  - sudo apt-get update -qq
+ install:
+  - sudo apt-get install -qq g++-6
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
+ script:
+   - g++ febin.cpp -std=c++17 -o travis_gcc_cpp17
+   - ./travis_gcc_cpp17
+   - g++ akshay.cpp -std=c++17 -o travis_gcc_cpp18
+   - ./travis_gcc_cpp18
+   - g++ himm.cpp -std=c++17 -o travis_gcc_cpp19
+   - ./travis_gcc_cpp19
+   - g++ AjeetDehal.cpp -std=c++17 -o travis_gcc_cpp20
+   - ./travis_gcc_cpp20
